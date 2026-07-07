@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RSSB Basic Computer Instructor 2026 Quiz</title>
+    <link rel="stylesheet" href="styles.css?v=3" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">R</span>
+          <div>
+            <h1>RSSB BCI 2026</h1>
+            <p>Offline Quiz Platform</p>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+          <button class="nav-btn" data-view="quiz">Quiz</button>
+          <button class="nav-btn" data-view="mock">Mock Test</button>
+          <button class="nav-btn" data-view="syllabus">Syllabus</button>
+          <button class="nav-btn" data-view="analytics">Analytics</button>
+          <button class="nav-btn" data-view="bank">Question Bank</button>
+          <button class="nav-btn" data-view="settings">Settings</button>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Official pattern based</p>
+            <h2 id="viewTitle">Dashboard</h2>
+          </div>
+          <div class="top-actions">
+            <button class="icon-btn" id="themeToggle" title="Theme">◐</button>
+            <button class="primary-btn" id="quickMockBtn">Start Full Mock</button>
+          </div>
+        </header>
+
+        <section id="dashboard" class="view active">
+          <div class="metric-grid">
+            <article class="metric"><span>Total Questions</span><strong id="totalQuestions">0</strong></article>
+            <article class="metric"><span>Attempted</span><strong id="attemptedCount">0</strong></article>
+            <article class="metric"><span>Accuracy</span><strong id="accuracy">0%</strong></article>
+            <article class="metric"><span>Daily Streak</span><strong id="streak">0</strong></article>
+          </div>
+          <div class="split">
+            <section class="panel">
+              <div class="panel-head">
+                <h3>Start Practice</h3>
+                <span id="coverageBadge">Syllabus mapped</span>
+              </div>
+              <div class="mode-grid" id="modeGrid"></div>
+            </section>
+            <section class="panel">
+              <div class="panel-head">
+                <h3>Weak Topics</h3>
+                <span>Auto analysis</span>
+              </div>
+              <div id="weakTopics" class="topic-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="quiz" class="view">
+          <div class="quiz-layout">
+            <section class="panel quiz-panel">
+              <div class="quiz-head">
+                <div>
+                  <p id="quizMeta" class="eyebrow">Choose a mode</p>
+                  <h3 id="questionText">Select filters and start quiz.</h3>
+                </div>
+                <div class="timer" id="timer">00:00</div>
+              </div>
+              <div id="options" class="options"></div>
+              <div class="quiz-actions">
+                <button class="ghost-btn" id="bookmarkBtn">Bookmark</button>
+                <button class="ghost-btn" id="skipBtn">Skip</button>
+                <button class="primary-btn" id="nextBtn">Next</button>
+              </div>
+              <div id="explanation" class="explanation hidden"></div>
+            </section>
+            <aside class="panel controls-panel">
+              <h3>Quiz Controls</h3>
+              <label>Mode<select id="quizMode"></select></label>
+              <label>Paper<select id="paperFilter"></select></label>
+              <label>Subject<select id="subjectFilter"></select></label>
+              <label>Topic<select id="topicFilter"></select></label>
+              <label>Difficulty<select id="difficultyFilter"></select></label>
+              <label>Questions<input id="questionLimit" type="number" min="5" max="200" value="20" /></label>
+              <button class="primary-btn full" id="startQuizBtn">Start Quiz</button>
+              <button class="ghost-btn full" id="finishQuizBtn">Finish & Review</button>
+            </aside>
+          </div>
+        </section>
+
+        <section id="mock" class="view">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Mock Tests</h3>
+              <span>1 mark, -1/3 negative marking</span>
+            </div>
+            <div class="mode-grid">
+              <button class="mode-card" data-mock="Paper-I">Paper-I Mock<br /><small>100 questions, 2 hours</small></button>
+              <button class="mode-card" data-mock="Paper-II">Paper-II Mock<br /><small>100 questions, 2 hours</small></button>
+              <button class="mode-card" data-mock="Complete">Complete Mock<br /><small>200 questions, 4 hours</small></button>
+              <button class="mode-card" data-mock="Expected">Expected 2026<br /><small>Mixed high-yield set</small></button>
+            </div>
+          </div>
+        </section>
+
+        <section id="syllabus" class="view">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Complete Syllabus Map</h3>
+              <input id="syllabusSearch" class="search" placeholder="Search topic..." />
+            </div>
+            <div id="syllabusTree" class="syllabus-tree"></div>
+          </div>
+        </section>
+
+        <section id="analytics" class="view">
+          <div class="split">
+            <section class="panel">
+              <h3>Subject Accuracy</h3>
+              <div id="subjectAccuracy" class="bar-list"></div>
+            </section>
+            <section class="panel">
+              <h3>Progress Graph</h3>
+              <canvas id="progressChart" width="640" height="320"></canvas>
+            </section>
+          </div>
+        </section>
+
+        <section id="bank" class="view">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Question Bank</h3>
+              <label class="file-btn">Import JSON<input id="importJson" type="file" accept=".json" multiple /></label>
+            </div>
+            <div class="filter-row">
+              <input id="bankSearch" class="search" placeholder="Search question, topic, subject..." />
+              <select id="bankPaper"></select>
+              <select id="bankDifficulty"></select>
+            </div>
+            <div id="questionList" class="question-list"></div>
+          </div>
+        </section>
+
+        <section id="settings" class="view">
+          <div class="panel settings-grid">
+            <label>Font Size<input id="fontSize" type="range" min="14" max="20" value="16" /></label>
+            <label><input id="timerSetting" type="checkbox" checked /> Timer enabled</label>
+            <label><input id="soundSetting" type="checkbox" /> Sound enabled</label>
+            <button class="danger-btn" id="resetProgress">Reset Progress</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="data/gen-questions.js?v=3"></script>
+    <script src="data/bank-paper1.js?v=3"></script>
+    <script src="data/bank-paper2.js?v=3"></script>
+    <script src="data/bank-extra.js?v=3"></script>
+    <script src="data/bank-2026-hindi.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

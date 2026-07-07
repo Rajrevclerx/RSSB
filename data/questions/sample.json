@@ -1,0 +1,16 @@
+[
+  {
+    "id": "SAMPLE-001",
+    "paper": "Paper-II",
+    "subject": "Data Processing",
+    "topic": "MS Excel",
+    "subtopic": "Formula",
+    "difficulty": "Easy",
+    "question": "MS Excel mein formula usually kis symbol se start hota hai?",
+    "options": ["=", "#", "@", "$"],
+    "answer": 0,
+    "explanation": "Excel formulas generally equal sign se start hote hain, jaise =SUM(A1:A5).",
+    "trick": "Excel formula = se equal result deta hai.",
+    "time": 25
+  }
+]
