@@ -95,7 +95,8 @@ function externalBank() {
     ...(w.RSSB_BANK_P1 || []),
     ...(w.RSSB_BANK_P2 || []),
     ...(w.RSSB_BANK_EXTRA || []),
-    ...(w.RSSB_BANK_2026H || [])
+    ...(w.RSSB_BANK_2026H || []),
+    ...(w.RSSB_MEGA || [])
   ];
 }
 
@@ -147,6 +148,8 @@ function bindEvents() {
   $("#bankPaper").addEventListener("change", renderBank);
   $("#bankDifficulty").addEventListener("change", renderBank);
   $("#importJson").addEventListener("change", importJson);
+  $("#paperFilter").addEventListener("change", () => { populateSubjectFilter(); populateTopicFilter(); });
+  $("#subjectFilter").addEventListener("change", populateTopicFilter);
   $("#fontSize").addEventListener("input", e => {
     state.settings.fontSize = Number(e.target.value);
     document.documentElement.style.fontSize = `${state.settings.fontSize}px`;
@@ -179,14 +182,12 @@ function showView(view) {
 
 function populateControls() {
   const papers = ["All", ...unique(questions.map(x => x.paper))];
-  const subjects = ["All", ...unique(questions.map(x => x.subject))];
-  const topics = ["All", ...unique(questions.map(x => x.topic))];
   const difficulties = ["All", "Easy", "Medium", "Hard"];
   fillSelect("#quizMode", ["All Questions Quiz", "Most Important 2026 Quiz", "Number System & Math (Computed)", "Curated Important Quiz", "Important 2022-Type Quiz", "Chapter Wise Quiz", "Topic Wise Quiz", "Subject Wise Quiz", "Paper-I Quiz", "Paper-II Quiz", "Pedagogy Quiz", "Mental Ability Quiz", "Programming Quiz", "Random Quiz", "Speed Quiz", "Revision Mode", "Wrong Answer Practice", "Bookmarked Questions"]);
   fillSelect("#paperFilter", papers);
-  fillSelect("#subjectFilter", subjects);
-  fillSelect("#topicFilter", topics);
   fillSelect("#difficultyFilter", difficulties);
+  populateSubjectFilter();
+  populateTopicFilter();
   fillSelect("#bankPaper", papers);
   fillSelect("#bankDifficulty", difficulties);
   $("#fontSize").value = state.settings.fontSize;
@@ -196,6 +197,30 @@ function populateControls() {
 
 function fillSelect(selector, values) {
   $(selector).innerHTML = values.map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join("");
+}
+
+// Subject dropdown ko selected Paper ke hisaab se bharo (dependent filter).
+function populateSubjectFilter() {
+  const paper = $("#paperFilter")?.value || "All";
+  const pool = paper === "All" ? questions : questions.filter(q => q.paper === paper);
+  const subjects = ["All", ...unique(pool.map(x => x.subject))];
+  const current = $("#subjectFilter")?.value;
+  fillSelect("#subjectFilter", subjects);
+  $("#subjectFilter").value = subjects.includes(current) ? current : "All";
+}
+
+// Topic dropdown ko selected Paper + Subject ke hisaab se bharo,
+// taaki impossible combination par pool khaali na ho.
+function populateTopicFilter() {
+  const paper = $("#paperFilter")?.value || "All";
+  const subject = $("#subjectFilter")?.value || "All";
+  let pool = questions;
+  if (paper !== "All") pool = pool.filter(q => q.paper === paper);
+  if (subject !== "All") pool = pool.filter(q => q.subject === subject);
+  const topics = ["All", ...unique(pool.map(x => x.topic))];
+  const current = $("#topicFilter")?.value;
+  fillSelect("#topicFilter", topics);
+  $("#topicFilter").value = topics.includes(current) ? current : "All";
 }
 
 function renderDashboard() {
@@ -449,19 +474,40 @@ function tick(reset = false) {
 async function importJson(event) {
   const files = Array.from(event.target.files || []);
   const imported = loadImported();
+  let added = 0;
+  const failed = [];
   for (const file of files) {
-    const text = await file.text();
-    const json = JSON.parse(text);
-    const items = Array.isArray(json) ? json : json.questions;
-    if (!Array.isArray(items)) continue;
-    items.filter(isQuestionLike).forEach(item => imported.push(item));
+    try {
+      const text = await file.text();
+      let json;
+      try {
+        json = JSON.parse(text);
+      } catch (parseErr) {
+        failed.push(`${file.name} (JSON format sahi nahi hai)`);
+        continue;
+      }
+      const items = Array.isArray(json) ? json : json && json.questions;
+      if (!Array.isArray(items)) {
+        failed.push(`${file.name} (questions array nahi mila)`);
+        continue;
+      }
+      const good = items.filter(isQuestionLike);
+      good.forEach(item => imported.push(item));
+      added += good.length;
+      if (!good.length) failed.push(`${file.name} (koi valid question nahi)`);
+    } catch (err) {
+      failed.push(`${file.name} (file padhi nahi ja saki)`);
+    }
   }
   localStorage.setItem(IMPORT_KEY, JSON.stringify(dedupe(imported)));
   questions = buildQuestions();
   populateControls();
   renderDashboard();
   renderBank();
-  alert("Questions imported successfully.");
+  event.target.value = "";
+  let msg = added ? `${added} questions import ho gaye.` : "Koi naya question import nahi hua.";
+  if (failed.length) msg += `\n\nIn files mein dikkat aayi:\n- ${failed.join("\n- ")}`;
+  alert(msg);
 }
 
 function isQuestionLike(item) {
