@@ -614,9 +614,21 @@ function shuffle(items) {
 }
 
 function dedupe(items) {
-  const map = new Map();
-  items.forEach(item => map.set(item.id, item));
-  return Array.from(map.values());
+  // Pehle id se dedupe (same id = same question).
+  const byId = new Map();
+  items.forEach(item => byId.set(item.id, item));
+  // Phir question-text se dedupe, taaki alag id waale duplicate
+  // questions (do banks mein galti se same sawal) app mein na dikhein.
+  const seenText = new Set();
+  const out = [];
+  for (const item of byId.values()) {
+    const raw = `${item.questionHi || ""} ${item.questionEn || ""} ${item.question || ""}`;
+    const key = raw.toLowerCase().replace(/\s+/g, " ").replace(/[^a-z0-9ऀ-ॿ ]/g, "").trim();
+    if (key && seenText.has(key)) continue;
+    if (key) seenText.add(key);
+    out.push(item);
+  }
+  return out;
 }
 
 function escapeHtml(value) {
