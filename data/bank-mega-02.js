@@ -33,7 +33,7 @@
     "अरावली पर्वत श्रृंखला राजस्थान में किस दिशा में फैली है?",
     "In which direction does the Aravalli range extend across Rajasthan?",
     ["उत्तर-पूर्व से दक्षिण-पश्चिम", "उत्तर से दक्षिण", "पूर्व से पश्चिम", "उत्तर-पश्चिम से दक्षिण-पूर्व"],
-    3,
+    0,
     "अरावली श्रृंखला राज्य में उत्तर-पूर्व (खेतड़ी) से दक्षिण-पश्चिम की ओर फैली है।",
     "अरावली = NE से SW तिरछी।",
     ["North-east to South-west", "North to South", "East to West", "North-west to South-east"]);

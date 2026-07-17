@@ -49,12 +49,12 @@
     ["Ananda Coomaraswamy", "Dr. Shridhar Andhare", "Dr. Faiyaz Ali", "Eric Dickinson"]);
 
   b("Paper-I", "Rajasthan Art & Culture", "Sects", "Ram Snehi", "medium",
-    "राम स्नेही सम्प्रदाय की रैण (शाहपुरा) शाखा के प्रवर्तक कौन थे?",
-    "Who was the founder of the Rain (Shahpura) branch of the Ram Snehi sect?",
+    "राम स्नेही सम्प्रदाय की शाहपुरा (भीलवाड़ा) शाखा के प्रवर्तक कौन थे?",
+    "Who was the founder of the Shahpura (Bhilwara) branch of the Ram Snehi sect?",
     ["संत रामचरण जी", "संत दरियाव जी", "संत हरिराम दास जी", "संत हरिदास जी"],
     0,
-    "रैण/शाहपुरा शाखा के प्रवर्तक संत रामचरण जी थे।",
-    "Rain (Shahpura) branch → Sant Ramcharan ji.",
+    "शाहपुरा शाखा के प्रवर्तक संत रामचरण जी थे; रैण (नागौर) शाखा के प्रवर्तक संत दरियाव जी थे।",
+    "Shahpura branch → Sant Ramcharan ji.",
     ["Sant Ramcharan ji", "Sant Dariyav ji", "Sant Hariram Das ji", "Sant Haridas ji"]);
 
   b("Paper-I", "Rajasthan Art & Culture", "Literature", "Kuvalayamala", "medium",
@@ -472,6 +472,15 @@
     "WHERE clause के बिना DELETE FROM टेबल की सभी tuples (rows) हटा देता है, पर टेबल की संरचना बनी रहती है।",
     "DELETE without WHERE → all rows removed.",
     ["Only first tuple is deleted", "The whole table structure is deleted", "All tuples of EMPLOYEE are deleted", "Nothing happens"]);
+
+  b("Paper-II", "Database Management System", "SQL", "DQL Category", "medium",
+    "डेटा प्राप्त (retrieve) करने वाली SELECT कमांड SQL की किस श्रेणी में आती है?",
+    "The SELECT command used to retrieve data belongs to which SQL category?",
+    ["DDL", "DML", "DQL (Data Query Language)", "TCL"],
+    2,
+    "SELECT डेटा को query/retrieve करती है, इसलिए इसे DQL (Data Query Language) माना जाता है। DDL=CREATE/ALTER/DROP/TRUNCATE, DML=INSERT/UPDATE/DELETE/MERGE, DCL=GRANT/REVOKE, TCL=COMMIT/ROLLBACK/SAVEPOINT।",
+    "SELECT = DQL (not DML).",
+    ["DDL", "DML", "DQL (Data Query Language)", "TCL"]);
 
   b("Paper-II", "Database Management System", "Relational Model", "Unary Operators", "medium",
     "Relational Algebra में unary (एकल) operators कौन-से हैं?",

@@ -165,12 +165,12 @@
     ["DML", "DDL", "DCL", "TCL"]);
 
   b("Paper-II", "Database Management System", "Data Manipulation", "DML Category", "medium",
-    "SELECT, INSERT, UPDATE और DELETE कमांड किस श्रेणी में आते हैं?",
-    "SELECT, INSERT, UPDATE and DELETE commands belong to which category?",
+    "INSERT, UPDATE और DELETE कमांड किस श्रेणी में आते हैं?",
+    "INSERT, UPDATE and DELETE commands belong to which category?",
     ["DDL", "DML", "DCL", "TCL"],
     1,
-    "SELECT, INSERT, UPDATE, DELETE डेटा हेरफेर भाषा (DML - Data Manipulation Language) के अंतर्गत आते हैं।",
-    "SELECT/INSERT/UPDATE/DELETE = DML.",
+    "INSERT, UPDATE, DELETE (व MERGE) डेटा हेरफेर भाषा (DML - Data Manipulation Language) के अंतर्गत आते हैं। ध्यान दें: SELECT को DQL (Data Query Language) माना जाता है।",
+    "INSERT/UPDATE/DELETE = DML; SELECT = DQL.",
     ["DDL", "DML", "DCL", "TCL"]);
 
   b("Paper-II", "Database Management System", "SQL", "DCL Category", "medium",

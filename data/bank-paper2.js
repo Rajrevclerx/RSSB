@@ -391,8 +391,8 @@
   b("Database Management System", "SQL", "DML", "Medium",
     "Nimn mein se kaunsa DML command hai?",
     "Which of the following is a DML command?",
-    ["SELECT", "CREATE", "DROP", "GRANT"], 0,
-    "SELECT, INSERT, UPDATE, DELETE DML commands hain (data manipulate karte hain).", "Data ka kaam = DML.");
+    ["INSERT", "CREATE", "DROP", "GRANT"], 0,
+    "INSERT, UPDATE, DELETE DML commands hain (data manipulate karte hain); CREATE/DROP = DDL, GRANT = DCL, SELECT = DQL.", "Data ka kaam = DML.");
   b("Database Management System", "RDBMS", "Primary Key", "Hard",
     "Primary key ke baare mein kaunsa statement sahi hai?",
     "Which statement about a primary key is correct?",
