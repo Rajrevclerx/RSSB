@@ -660,28 +660,28 @@
     ["Kalbelia (saperon ka samuday)", "Bhil", "Meena", "Garasia"], 0,
     "Kalbeliya nritya Kalbelia (saperon) samuday ka hai aur 2010 mein UNESCO intangible heritage mein shaamil hua.", "Kalbeliya = Kalbelia saap wale.",
     ["Kalbelia (snake charmer community)", "Bhil", "Meena", "Garasia"]);
-  e("Paper-I", "Rajasthan GK", "Tribes", "Largest tribe", "Medium",
+  e("Paper-I", "Rajasthan Art & Culture", "Tribes", "Largest tribe", "Medium",
     "Rajasthan ki sabse badi janjaati (tribe) kaunsi hai?",
     "Which is the largest tribe of Rajasthan?",
     ["Bhil", "Meena", "Garasia", "Sahariya"], 1,
     "Jansankhya ke aadhaar par Meena Rajasthan ki sabse badi janjaati hai, uske baad Bhil.", "Sankhya: Meena > Bhil.");
-  e("Paper-I", "Rajasthan GK", "National Parks", "Tigers", "Medium",
+  e("Paper-I", "Rajasthan Geography", "National Parks", "Tigers", "Medium",
     "Baaghon (tigers) ke liye prasiddh Ranthambore National Park kis zile mein hai?",
     "Ranthambore National Park, famous for tigers, is in which district?",
     ["Sawai Madhopur", "Bharatpur", "Kota", "Alwar"], 0,
     "Ranthambore National Park Sawai Madhopur mein baaghon ke liye prasiddh hai.", "Ranthambore = Sawai Madhopur baagh.");
-  e("Paper-I", "Rajasthan GK", "National Parks", "Bird sanctuary", "Medium",
+  e("Paper-I", "Rajasthan Geography", "National Parks", "Bird sanctuary", "Medium",
     "Pakshiyon ke liye prasiddh Keoladeo National Park (UNESCO) kaha sthit hai?",
     "Keoladeo National Park (UNESCO), famous for birds, is located where?",
     ["Bharatpur", "Sawai Madhopur", "Bikaner", "Jaisalmer"], 0,
     "Keoladeo (Ghana) National Park Bharatpur mein pravaasi pakshiyon ke liye prasiddh, UNESCO World Heritage hai.", "Ghana = Bharatpur pakshi.");
-  e("Paper-I", "Rajasthan GK", "State symbols", "State bird", "Medium",
+  e("Paper-I", "Rajasthan Geography", "State symbols", "State bird", "Medium",
     "Rajasthan ka rajya pakshi (state bird) kaunsa hai?",
     "What is the state bird of Rajasthan?",
     ["Godawan (Great Indian Bustard)", "Mor", "Koyal", "Baaz"], 0,
     "Rajasthan ka rajya pakshi Godawan (Great Indian Bustard / Son Chiraiya) hai.", "State bird = Godawan.",
     ["Godawan (Great Indian Bustard)", "Peacock", "Koel", "Falcon"]);
-  e("Paper-I", "Rajasthan GK", "State symbols", "State tree", "Easy",
+  e("Paper-I", "Rajasthan Geography", "State symbols", "State tree", "Easy",
     "Rajasthan ka rajya vriksh (state tree) kaunsa hai?",
     "What is the state tree of Rajasthan?",
     ["Khejri", "Neem", "Peepal", "Rohida"], 0,
@@ -691,7 +691,7 @@
     "On which date is Rajasthan Day (Rajasthan Diwas) celebrated?",
     ["30 March", "1 November", "15 August", "26 January"], 0,
     "30 March 1949 ko Rajasthan ka ekikaran hua, isliye 30 March ko Rajasthan Diwas manaya jaata hai.", "30 March = Rajasthan Diwas.");
-  e("Paper-I", "Rajasthan GK", "Fairs", "Camel fair", "Easy",
+  e("Paper-I", "Rajasthan Art & Culture", "Fairs", "Camel fair", "Easy",
     "Prasiddh oont mela (camel fair) Pushkar kis zile mein lagta hai?",
     "The famous Pushkar camel fair is held in which district?",
     ["Ajmer", "Jodhpur", "Bikaner", "Jaisalmer"], 0,

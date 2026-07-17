@@ -180,7 +180,7 @@
 
   // ---------------- Paper-I: Reasoning ----------------
 
-  b("Paper-I", "Reasoning", "Clock", "Angle", "medium",
+  b("Paper-I", "General Ability", "Clock", "Angle", "medium",
     "एक घड़ी में 3:25 बजे घंटे व मिनट की सुई के बीच का कोण कितना है?",
     "What is the angle between the hour and minute hands of a clock at 3:25?",
     ["47½°", "45½°", "45°", "40°"],
@@ -189,7 +189,7 @@
     "|30H − 5.5M| = 47.5°.",
     ["47.5°", "45.5°", "45°", "40°"]);
 
-  b("Paper-I", "Reasoning", "Clock", "Straight Line", "medium",
+  b("Paper-I", "General Ability", "Clock", "Straight Line", "medium",
     "एक दिन (24 घंटे) में घड़ी की दोनों सुइयाँ कितनी बार सीधी रेखा में होती हैं?",
     "In a day (24 hours), how many times are the two hands of a clock in a straight line?",
     ["22 बार", "44 बार", "24 बार", "48 बार"],
@@ -198,7 +198,7 @@
     "Coincide 22 + opposite 22 = 44.",
     ["22 times", "44 times", "24 times", "48 times"]);
 
-  b("Paper-I", "Reasoning", "Word Formation", "Rearrangement", "easy",
+  b("Paper-I", "General Ability", "Word Formation", "Rearrangement", "easy",
     "'LASBEBLA' के अक्षरों को व्यवस्थित करने पर एक खेल का नाम बनता है — उसका पहला व अंतिम अक्षर क्या होगा?",
     "Rearranging the letters of 'LASBEBLA' forms the name of a game — what are its first and last letters?",
     ["B, L", "L, S", "L, E", "S, L"],
@@ -247,7 +247,7 @@
 
   // ---------------- Paper-II: MS Office / Data Processing ----------------
 
-  b("Paper-II", "MS Office", "PowerPoint", "Views", "easy",
+  b("Paper-II", "Data Processing", "PowerPoint", "Views", "easy",
     "MS-PowerPoint में स्लाइड्स को पुनर्व्यवस्थित (rearrange) करने हेतु सबसे उपयुक्त view कौन-सा है?",
     "Which view is most suitable for rearranging slides in MS-PowerPoint?",
     ["Slide Sorter", "Notes Page", "Normal", "Slide Show"],
@@ -256,7 +256,7 @@
     "Rearrange slides → Slide Sorter.",
     ["Slide Sorter", "Notes Page", "Normal", "Slide Show"]);
 
-  b("Paper-II", "MS Office", "PowerPoint", "Shortcut Keys", "medium",
+  b("Paper-II", "Data Processing", "PowerPoint", "Shortcut Keys", "medium",
     "MS-PowerPoint में slide show शुरुआत से चलाने हेतु कौन-सी key तथा वर्तमान स्लाइड से चलाने हेतु कौन-सी key है?",
     "In MS-PowerPoint, which key starts the slide show from the beginning and which from the current slide?",
     ["F5 और Shift+F5", "F6 और F8", "F7 और Shift+F7", "F2 और F9"],
@@ -265,7 +265,7 @@
     "F5 = start, Shift+F5 = current.",
     ["F5 and Shift+F5", "F6 and F8", "F7 and Shift+F7", "F2 and F9"]);
 
-  b("Paper-II", "MS Office", "Word", "WordArt", "easy",
+  b("Paper-II", "Data Processing", "Word", "WordArt", "easy",
     "MS-Word में सजावटी टेक्स्ट (decorative text) क्या कहलाता है?",
     "In MS-Word, decorative text is called?",
     ["Bookmark", "WordArt", "SmartArt", "ClipArt"],
@@ -274,7 +274,7 @@
     "Decorative text → WordArt.",
     ["Bookmark", "WordArt", "SmartArt", "ClipArt"]);
 
-  b("Paper-II", "MS Office", "Word", "Gutter", "medium",
+  b("Paper-II", "Data Processing", "Word", "Gutter", "medium",
     "MS-Word में 'Gutter' मार्जिन किससे संबंधित है?",
     "In MS-Word, the 'Gutter' margin is related to?",
     ["पेज ओरिएंटेशन", "बाइंडिंग के लिए अतिरिक्त मार्जिन", "समीकरण", "फ़ॉन्ट रंग"],
@@ -283,7 +283,7 @@
     "Gutter → extra binding margin.",
     ["Page orientation", "Extra margin for binding", "Equation", "Font colour"]);
 
-  b("Paper-II", "MS Office", "Windows Tools", "Snipping", "easy",
+  b("Paper-II", "Data Processing", "Windows Tools", "Snipping", "easy",
     "स्क्रीन के केवल एक हिस्से का स्क्रीनशॉट लेने हेतु कौन-सा shortcut है?",
     "Which shortcut is used to take a screenshot of only a part of the screen?",
     ["Windows + Shift + S", "Ctrl + P", "Alt + PrtSc", "Ctrl + Shift + S"],
@@ -332,7 +332,7 @@
 
   // ---------------- Paper-II: Data Structures ----------------
 
-  b("Paper-II", "Data Structure", "Searching", "Binary Search", "medium",
+  b("Paper-II", "Data Structures and Algorithms", "Searching", "Binary Search", "medium",
     "Binary search के बारे में कौन-सा कथन सत्य है?",
     "Which statement about binary search is TRUE?",
     ["यह केवल क्रमबद्ध (sorted) सूची पर लागू होता है", "यह अक्रमित सूची पर भी चलता है", "यह linear search से धीमा है", "यह केवल linked list पर चलता है"],
@@ -341,7 +341,7 @@
     "Binary search needs sorted input.",
     ["It works only on a sorted list", "It works on unsorted lists too", "It is slower than linear search", "It works only on linked lists"]);
 
-  b("Paper-II", "Data Structure", "Arrays", "Traversal", "easy",
+  b("Paper-II", "Data Structures and Algorithms", "Arrays", "Traversal", "easy",
     "Linear array LA पर 'Repeat for K=LB to UB: apply PROCESS to LA[K]' एल्गोरिथ्म क्या करता है?",
     "For a linear array LA, the algorithm 'Repeat for K=LB to UB: apply PROCESS to LA[K]' does what?",
     ["Insertion", "Deletion", "Traversal (LA को traverse करता है)", "Sorting"],
@@ -352,7 +352,7 @@
 
   // ---------------- Paper-II: Computer Organization & OS ----------------
 
-  b("Paper-II", "Operating System", "Boot Process", "Bootstrap Loader", "medium",
+  b("Paper-II", "Computer Organization and Operating System", "Boot Process", "Bootstrap Loader", "medium",
     "छोटा bootstrap loader प्रोग्राम कहाँ संग्रहीत होता है?",
     "Where is the small bootstrap loader program stored?",
     ["ROM / BIOS में", "हार्ड डिस्क में", "RAM में", "कैश में"],
@@ -361,7 +361,7 @@
     "Bootstrap loader → ROM/BIOS.",
     ["In ROM / BIOS", "In hard disk", "In RAM", "In cache"]);
 
-  b("Paper-II", "Operating System", "Concurrency", "Race Condition", "medium",
+  b("Paper-II", "Computer Organization and Operating System", "Concurrency", "Race Condition", "medium",
     "जब तीन thread एक ही object को एक साथ share/access करें तो कौन-सी condition उत्पन्न होती है?",
     "When three threads share/access the same object simultaneously, which condition arises?",
     ["Time-lapse", "Critical situation", "Race condition", "Recursion"],
@@ -370,7 +370,7 @@
     "Unsynchronised shared access → Race condition.",
     ["Time-lapse", "Critical situation", "Race condition", "Recursion"]);
 
-  b("Paper-II", "Operating System", "Digital Logic", "Multiplexer", "medium",
+  b("Paper-II", "Computer Organization and Operating System", "Digital Logic", "Multiplexer", "medium",
     "वह combinational logic circuit जिसमें 2ⁿ input lines व एक single output line होती है, क्या कहलाता है?",
     "A combinational logic circuit with 2ⁿ input lines and a single output line is called?",
     ["Multiplexer", "Demultiplexer", "Encoder", "Decoder"],
@@ -379,7 +379,7 @@
     "Many in, one out → Multiplexer.",
     ["Multiplexer", "Demultiplexer", "Encoder", "Decoder"]);
 
-  b("Paper-II", "Operating System", "Process Management", "Process States", "easy",
+  b("Paper-II", "Computer Organization and Operating System", "Process Management", "Process States", "easy",
     "एक प्रक्रिया (Process) की सामान्यतः कितनी अवस्थाएँ (states) होती हैं?",
     "How many states does a process generally have?",
     ["3", "4", "5", "6"],
@@ -390,7 +390,7 @@
 
   // ---------------- Paper-II: Networking & Security ----------------
 
-  b("Paper-II", "Networking", "Protocols", "HTTP", "easy",
+  b("Paper-II", "Communication and Network Concepts", "Protocols", "HTTP", "easy",
     "वेब पेज ट्रांसफर के लिए सामान्यतः प्रयुक्त प्रोटोकॉल कौन-सा है?",
     "Which protocol is commonly used for transferring web pages?",
     ["HTML", "HTTP", "WML", "SMTP"],
@@ -399,7 +399,7 @@
     "Web pages → HTTP.",
     ["HTML", "HTTP", "WML", "SMTP"]);
 
-  b("Paper-II", "Networking", "Network Security", "Rootkit", "medium",
+  b("Paper-II", "Communication and Network Concepts", "Network Security", "Rootkit", "medium",
     "वह malicious software जो OS की सामान्य कार्यप्रणाली बदलकर पूर्ण नियंत्रण ले लेता है व admin की तरह कार्य करता है, क्या कहलाता है?",
     "The malicious software that alters normal OS functionality, takes full control and acts like an administrator is called?",
     ["Spyware", "Virus", "Rootkit", "Trojan horse"],
@@ -408,7 +408,7 @@
     "Admin-level stealth control → Rootkit.",
     ["Spyware", "Virus", "Rootkit", "Trojan horse"]);
 
-  b("Paper-II", "Networking", "Network Security", "Hacktivism", "medium",
+  b("Paper-II", "Communication and Network Concepts", "Network Security", "Hacktivism", "medium",
     "'Hacktivism' का क्या अर्थ है?",
     "What does 'Hacktivism' mean?",
     ["पैसे के लिए हैकिंग", "राजनीतिक/सामाजिक उद्देश्य से सिस्टम हैक करना", "सिस्टम की सुरक्षा जाँच", "गलती से हुई हैकिंग"],
@@ -417,7 +417,7 @@
     "Hacking for political/social cause → Hacktivism.",
     ["Hacking for money", "Hacking systems for a political/social cause", "Checking system security", "Accidental hacking"]);
 
-  b("Paper-II", "Networking", "Network Security", "Phreaking", "medium",
+  b("Paper-II", "Communication and Network Concepts", "Network Security", "Phreaking", "medium",
     "मुफ्त कॉल करने हेतु सबसे पुरानी phone hacking तकनीक क्या कहलाती है?",
     "What is the oldest phone hacking technique used to make free calls called?",
     ["Spamming", "Phreaking", "Cracking", "Phishing"],
@@ -531,7 +531,7 @@
     "Labelled data → Supervised learning.",
     ["Supervised learning", "Unsupervised learning", "Reinforcement learning", "Clustering"]);
 
-  b("Paper-II", "Emerging Technologies", "Cloud Computing", "Service Models", "medium",
+  b("Paper-II", "Internet of Things and Applications", "Cloud Computing", "Service Models", "medium",
     "क्लाउड कंप्यूटिंग में इंटरनेट पर वर्चुअल मशीन/स्टोरेज जैसी बुनियादी संसाधन उपलब्ध कराने वाला मॉडल कौन-सा है?",
     "In cloud computing, which model provides basic resources like virtual machines/storage over the internet?",
     ["SaaS", "PaaS", "IaaS", "DaaS"],
